@@ -1,7 +1,3 @@
-# CNN_TextClassification
-
-Part of a course project of NLP at U.C.A.S in 2018 Spring
-
 本实验用到了工具库keras和sklearn，就CNN对文本的内容和情感的分类做对比试验
 # ContentClassification
 ## 1 只用CNN
