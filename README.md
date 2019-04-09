@@ -1,10 +1,12 @@
 # CNN_TextClassification
+
 Part of a course project of NLP at U.C.A.S in 2018 Spring
+
 本实验用到了工具库keras和sklearn，就CNN对文本的内容和情感的分类做对比试验
 # ContentClassification
 ## 1 只用CNN
 ### 模型结构：
-
+```
 model = Sequential()
 model.add(Embedding(len(word_index)+1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH))
 model.add(Dropout(0.2))
@@ -13,12 +15,13 @@ model.add(MaxPooling1D(3))
 model.add(Flatten())
 model.add(Dense(EMBEDDING_DIM, activation='relu'))
 model.add(Dense(labels.shape[1], activation='softmax'))
- 
+```
 ### 性能结果:
 
  
 ## 2 cnn+fasttext:
 ### 模型结构：
+```
 model = Sequential()
 model.add(embedding_layer)
 model.add(Dropout(0.2))
@@ -30,7 +33,7 @@ model.add(MaxPooling1D(3))
 model.add(Flatten())
 model.add(Dense(EMBEDDING_DIM, activation='relu'))
 model.add(Dense(labels.shape[1],activation='softmax')) 
-
+```
 ### 性能结果：
 
  
@@ -43,6 +46,7 @@ model.add(Dense(labels.shape[1],activation='softmax'))
 # EmotionClassification
 ## cnn_only:
 ### 模型结构：
+```
 model = Sequential()
 model.add(Embedding(len(word_index)+1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH))
 model.add(Dropout(0.2))
@@ -51,13 +55,14 @@ model.add(MaxPooling1D(3))
 model.add(Flatten())
 model.add(Dense(EMBEDDING_DIM, activation='relu'))
 model.add(Dense(labels.shape[1], activation='softmax'))
-
+```
 ### 性能结果：
 
  
 
 ## fasttext+cnn:
 ### 模型结构：
+```
 model = Sequential()
 model.add(embedding_layer)
 model.add(Dropout(0.2))
@@ -66,7 +71,7 @@ model.add(MaxPooling1D(3))
 model.add(Flatten())
 model.add(Dense(EMBEDDING_DIM, activation='relu'))
 model.add(Dense(labels.shape[1], activation='softmax'))
-
+```
 ### 性能结果：
  <img src="https://github.com/Legend-yd/MyDawn/blob/master/20171223205540585.png" width="300" height="450" />
 只用cnn和将embedding层参数减少替换成fasttext词向量模型的cnn相比：
