@@ -4,6 +4,7 @@ Part of a course project of NLP at U.C.A.S in 2018 Spring
 # ContentClassification
 ## 1 只用CNN
 ### 模型结构：
+
 model = Sequential()
 model.add(Embedding(len(word_index)+1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH))
 model.add(Dropout(0.2))
