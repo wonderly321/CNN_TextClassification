@@ -2,7 +2,7 @@
 Part of a course project of NLP at U.C.A.S in 2018 Spring
 本实验用到了工具库keras和sklearn，就CNN对文本的内容和情感的分类做对比试验
 # ContentClassification
-## 1只用CNN
+## 1 只用CNN
 ### 模型结构：
 model = Sequential()
 model.add(Embedding(len(word_index)+1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH))
