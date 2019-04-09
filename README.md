@@ -1,6 +1,6 @@
 本实验用到了工具库keras和sklearn，就CNN对文本的内容和情感的分类做对比试验
 
-fasttext 词向量: [Link](https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.zh.vec)
+fasttext 词向量: [Link](https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.zh.vec) ,下载并放在对应文件夹下
 
 # ContentClassification
 ## 1 只用CNN
